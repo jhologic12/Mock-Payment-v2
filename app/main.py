@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from app.routers import account_router, card_router, payment_router
 from app.database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
-
+from app.models import Account, Card, Payment
 # Crear tablas si no existen
 Base.metadata.create_all(bind=engine)
 
